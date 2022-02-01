@@ -2,7 +2,7 @@ const { merge } = require("webpack-merge");
 const ReactRefreshWebpackPlugin = require("@pmmmwh/react-refresh-webpack-plugin");
 
 const common = require("./webpack.common");
-const paths = require("../scripts/paths");
+const paths = require("./helpers");
 
 /** @type {import('webpack').Configuration} */
 module.exports = merge(common, {

@@ -2,7 +2,7 @@ const { ProvidePlugin } = require("webpack");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
-const paths = require("../scripts/paths");
+const paths = require("./helpers");
 
 /** @type {import('webpack').Configuration} */
 module.exports = {
