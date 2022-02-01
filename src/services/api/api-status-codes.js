@@ -1,8 +1,4 @@
-type ApiStatusCode = {
-  [statusCode: number]: string;
-};
-
-export const apiStatusCodes: Readonly<ApiStatusCode> = {
+export const apiStatusCodes = {
   200: "OK",
   201: "Created",
   202: "Accepted",

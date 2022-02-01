@@ -1,24 +1,16 @@
-import { Api, ApiContext, ApiError } from "@app/core/api/ApiContext";
-import { ReactNode, useState } from "react";
+import { ApiContext } from "@app/core/api/ApiContext";
+import { useState } from "react";
 import { requests } from "./api-requests";
+import { responses } from "./api-responses";
 
-export function ApiProvider({ children }: { children: ReactNode }) {
-  const [error, setError] = useState<ApiError | null>(null);
+export function ApiProvider({ children }) {
+  const [error, setError] = useState(null);
 
-  const apiClient: Api = {
+  const apiClient = {
     apiRequest: async (configName, args) => {
       if (!requests[configName]) {
         throw new Error("No request name defined");
       }
-
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      const responses: { [url: string]: any } = {
-        "/dailyGameName": {
-          data: {
-            gameName: "Space Invaders",
-          },
-        },
-      };
 
       const { url } = requests[configName];
       if (url) {

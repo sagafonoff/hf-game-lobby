@@ -3,14 +3,12 @@ import React, { useEffect, useState } from "react";
 
 export const MainLobby = () => {
   const api = useApiContext();
-  const [gameName, setGameName] = useState<string>("");
+  const [gameName, setGameName] = useState("");
 
   useEffect(() => {
     async function fetchGameName() {
       if (api) {
-        const response: { data: { gameName: string } } = await api.apiRequest(
-          "getDailyGameName"
-        );
+        const response = await api.apiRequest("getDailyGameName");
         setGameName(response?.data.gameName);
       }
     }

@@ -2,13 +2,13 @@ const { ProvidePlugin } = require("webpack");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
-const paths = require("../scripts/paths");
+const paths = require("./helpers");
 
 /** @type {import('webpack').Configuration} */
 module.exports = {
   // Where webpack looks to start building the bundle
   entry: {
-    app: `${paths.src}/index.tsx`,
+    app: `${paths.src}/index.jsx`,
   },
 
   // Where webpack outputs the assets and bundles
@@ -22,6 +22,17 @@ module.exports = {
   // Determine how modules within the project are treated
   module: {
     rules: [
+      // Babel for JS
+      {
+        test: /\.jsx?$/,
+        exclude: /(node_modules)/,
+        use: {
+          loader: "babel-loader",
+          options: {
+            presets: ["@babel/preset-env", "@babel/preset-react"],
+          },
+        },
+      },
       // JavaScript: Use SWC to transpile JavaScript files
       {
         test: /\.(ts|tsx)$/,
@@ -41,7 +52,7 @@ module.exports = {
   },
 
   resolve: {
-    extensions: [".json", ".ts", ".tsx", "..."],
+    extensions: [".js", ".jsx", ".json", ".ts", ".tsx", "..."],
     modules: [paths.src, "node_modules"],
     alias: {
       "@app": `${paths.src}/app`,
