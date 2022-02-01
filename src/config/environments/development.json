@@ -1,5 +1,0 @@
-{
-  "TARGET": "development",
-  "BASE_URL": "https://jsonplaceholder.typicode.com",
-  "MOCK_URL": "https://9be8fbca-b41e-48ca-a152-dbcb477ab135.mock.pstmn.io"
-}

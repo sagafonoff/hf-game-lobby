@@ -1,11 +1,11 @@
 {
-  "name": "react-service-template",
+  "name": "hf-game-lobby",
   "version": "0.1.0",
   "private": true,
-  "description": "Sensible React Template for new HelloFresh FrontEnd applications",
-  "homepage": "https://github.com/hellofresh/katana-services#readme",
+  "description": "Hello Fresh Game Lobby front end coding challenge",
+  "homepage": "https://github.com/sagafonoff/hf-game-lobby#readme",
   "bugs": {
-    "url": "https://github.com/hellofresh/katana-services/issues"
+    "url": "https://github.com/sagafonoff/hf-game-lobby/issues"
   },
   "repository": {
     "type": "git",
@@ -13,13 +13,10 @@
   },
   "scripts": {
     "clean": "rm -rf package-lock.json node_modules build cache coverage",
-    "preview": "npx serve build -l 3030",
-    "set:env": "node config/scripts/set-env.js",
-    "start": "npm run set:env development && webpack serve --config config/webpack/webpack.dev.js",
+    "start": "webpack serve --config config/webpack/webpack.dev.js",
     "test": "jest -c=config/jest/jest.config.js"
   },
   "dependencies": {
-    "@hellofresh/scm-design-system": "0.2.10",
     "@material-ui/core": "4.12.3",
     "@material-ui/icons": "4.11.2",
     "@material-ui/lab": "4.0.0-alpha.60",
@@ -56,9 +53,5 @@
     "webpack-cli": "4.9.2",
     "webpack-dev-server": "4.7.3",
     "webpack-merge": "5.8.0"
-  },
-  "engines": {
-    "node": "^14.15.0 || >=16.13.0",
-    "npm": ">=6.14.0"
   }
 }

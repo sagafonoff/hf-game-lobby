@@ -13,10 +13,9 @@ export type ApiResponse<R> = { data: R };
 export interface Api {
   apiRequest: <T extends RequestArgs, R>(
     name: RequestType,
-    args: T
+    args?: T
   ) => Promise<ApiResponse<R>>;
   error: ApiError | null;
-  setError: (error: ApiError) => void;
 }
 
 export const ApiContext = createContext<Api | null>(null);
