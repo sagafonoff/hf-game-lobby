@@ -1,6 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 
-export function NotFoundView() {
+export function NotFound() {
   const location = useLocation();
 
   return (

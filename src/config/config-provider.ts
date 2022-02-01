@@ -7,23 +7,14 @@ export interface Config {
   MOCK_URL: string;
 }
 
-// type ConfigProvider = () => Config;
-
 class ConfigProvider {
   constructor(appConfig: Config) {
     Object.keys(appConfig).forEach((k) => {
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-ignore: element explicit has any
       this[k] = appConfig[k];
     });
   }
 }
-
-// export const AppVersionInfo = () => {
-//   return AppConfigProvider.ENV === "production"
-//     ? `v${AppConfigProvider.VERSION}`
-//     : `${capitalize(AppConfigProvider.ENV)}\u00A0-\u00A0v${
-//         AppConfigProvider.VERSION
-//       }`;
-// };
 
 export const AppConfigProvider = new ConfigProvider(AppConfiguation) as Config;

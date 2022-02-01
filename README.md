@@ -1,14 +1,10 @@
-# React Template
+# Hello Fresh Game Lobby
 
-A project template for creating applications with React
+A fun way to try out your front end development skills!
 
 ## Pre-requesites
 
 - [Node.js 16](https://nodejs.org/en/)
-- [NPM Access Token](https://docs.npmjs.com/creating-and-viewing-access-tokens)
-- Access to the hellofresh organization on npm
-- [Gitleaks](https://hellodev.hellofresh.io/docs/default/system/hf-toolbox/user-guide/menu/security/#security-menu)
-- [Git Hooks](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks)
 
 ## Setup
 

@@ -12,14 +12,7 @@
     "url": "git+https://github.com/sagafonoff/hf-game-lobby.git"
   },
   "scripts": {
-    "build:staging": "npm run set:env staging && webpack --config config/webpack/webpack.build.js",
-    "build": "npm run set:env production && webpack --config config/webpack/webpack.build.js",
-    "check:install": "node config/scripts/preinstall.js",
     "clean": "rm -rf package-lock.json node_modules build cache coverage",
-    "compile": "tsc",
-    "format": "prettier --write . --ignore-unknown --ignore-path .gitignore",
-    "lint:fix": "npm run lint -- --fix",
-    "lint": "eslint src --ext .jsx,.ts,.tsx",
     "preview": "npx serve build -l 3030",
     "set:env": "node config/scripts/set-env.js",
     "start": "npm run set:env development && webpack serve --config config/webpack/webpack.dev.js",
