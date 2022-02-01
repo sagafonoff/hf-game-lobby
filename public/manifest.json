@@ -1,0 +1,28 @@
+{
+  "id": "YOUR_APP_ID",
+  "short_name": "YOUR_APP_NAME",
+  "name": "YOUR_APP_NAME",
+  "description": "YOUR_APP_DESCRIPTION",
+  "display": "minimal-ui",
+  "theme_color": "#96DC14",
+  "background_color": "#ffffff",
+  "scope": "/",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}

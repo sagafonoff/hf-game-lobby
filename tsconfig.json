@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "sourceMap": true,
+    "target": "es2018",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": false,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "paths": {
+      "@app/*": ["src/app/*"],
+      "@assets/*": ["src/assets/*"],
+      "@config": ["src/config/*"],
+      "@domain/*": ["src/domain/*"],
+      "@services/*": ["src/services/*"]
+    }
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "build"]
+}

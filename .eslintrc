@@ -1,0 +1,22 @@
+{
+  "root": true,
+  "ignorePatterns": [
+    "build",
+    "node_modules",
+    "config/*",
+    "src/@types/custom.d.ts"
+  ],
+  "settings": {
+    "react": {
+      "version": "latest"
+    }
+  },
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "react-app",
+    "prettier"
+  ]
+}
