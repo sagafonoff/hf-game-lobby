@@ -14,7 +14,7 @@ export const MainLobby = () => {
     }
 
     fetchGameName();
-  }, [api]);
+  });
 
   return (
     <div>
